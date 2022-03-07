@@ -2,3 +2,31 @@
 캐시와 메세지 큐 기능 적용
 자바 구현 알고리즘 ( 쉽게 푸는 문제(백준 1292번 ) )
 자바 -> 스택, 큐, 리스트 ,배열
+=======================================
+
+
+import os
+import sys
+import urllib.request
+import ssl
+
+def papago(a):
+    text = a
+    client_id = "아이디는 안써놓았음" # 개발자센터에서 발급받은 Client ID 값
+    client_secret = "비밀번호도 안 써놓았음" # 개발자센터에서 발급받은 Client Secret 값
+    encText = urllib.parse.quote(a)
+    data = "source=ko&target=en&text=" + encText
+    url = "https://openapi.naver.com/v1/papago/n2mt"
+    request = urllib.request.Request(url)
+    request.add_header("X-Naver-Client-Id",client_id)
+    request.add_header("X-Naver-Client-Secret",client_secret)   
+    context = ssl._create_unverified_context()
+    response = urllib.request.urlopen(request, data=data.encode("utf-8"), context=context)
+    rescode = response.getcode()
+    if(rescode==200):
+        response_body = response.read()
+        print(response_body.decode('utf-8'))
+    else:
+        print("Error Code:" + rescode)
+
+print(papago("안녕 나는 학생이야"))
