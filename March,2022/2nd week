@@ -1,0 +1,36 @@
+자바 알고리즘을 풀며
+
+========================================================================================
+String substring(int index)      String substring(int beginIndex, int endIndex)
+
+ran.nextInt(100)              => 0~99 난수
+Math.max , Math.min           => 두 수중 큰 값, 작은 값 
+Math.pow(5,2) , Math.sqrt(25) => 25, 5
+
+String str = "I have a pen. I have an apple. and pineapple";
+        str = str.replace("I", "You"); // I 문자를 YOU로 변경
+
+replace , replaceAll
+
+< 복사 >
+[1]
+int[] a = { 1, 2, 3, 4 };
+        int[] b = a.clone();
+
+[2]
+import java.util.Arrays;
+
+int[] a = { 1, 2, 3, 4 };
+        int[] b = Arrays.copyOf(a, a.length);
+
+[3]
+import java.util.Arrays;
+
+int[] a = { 1, 2, 3, 4 };
+        int[] b = Arrays.copyOfRange(a, 1, 3);
+        
+
+<continue, break>
+
+break -> 즉시 해당 문 탈출
+continue -> 해당하는 턴을 넘기며 다음 것 출력 진행
