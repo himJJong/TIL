@@ -50,5 +50,15 @@ System.out.println("최소공배수 : " + a * b / gcd);
 
 =========================================================
 
+에라토네스의 채
 Spring maven과 gradle 기본 환경 세팅 후 test까지 (+ 둘의 차이)
 
+	String str_n = String.valueOf(n);       //정수를 문자열로
+	String[] strArray = str_n.split("");    //한 개씩 쪼갠 후
+		
+	for(String s : strArray) {
+		int sum  = Integer.parseInt(s); //sum에 넣고 answer+, 문자열을 정수로
+		answer+=sum;
+	}
+	return answer;
+          
