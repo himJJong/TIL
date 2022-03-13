@@ -48,3 +48,7 @@ for (int i = 1; i <= min; i++) {
 System.out.println("최대공약수 : " + gcd); 
 System.out.println("최소공배수 : " + a * b / gcd);
 
+=========================================================
+
+Spring maven과 gradle 기본 환경 세팅 후 test까지 (+ 둘의 차이)
+
