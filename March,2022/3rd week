@@ -1,0 +1,2 @@
+문자열 비교 => .equals() , equalsIgnoreCase()
+반올림 함수 => Math.round 
