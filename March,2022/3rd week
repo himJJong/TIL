@@ -6,3 +6,7 @@
 
 <동등 비교>
 피연산자 != 는 두 값이 다른지 검사
+
+<정렬>
+Arrays.sort(arr,Collections.reverseOrder());
+Arrays.sort(arr);
