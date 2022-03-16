@@ -10,3 +10,9 @@
 <정렬>
 Arrays.sort(arr,Collections.reverseOrder());
 Arrays.sort(arr);
+
+String mA = String.valueOf(변수명1);
+
+String mB = Long.toString(변수명1);
+
+String mC = Integer.toString(변수명2);
