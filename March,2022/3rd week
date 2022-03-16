@@ -1,2 +1,8 @@
-문자열 비교 => .equals() , equalsIgnoreCase()
-반올림 함수 => Math.round 
+<문자열 비교> 
+.equals() , equalsIgnoreCase()
+
+반올림 함수
+<Math.round> 
+
+<동등 비교>
+피연산자 != 는 두 값이 다른지 검사
