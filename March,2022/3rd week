@@ -33,6 +33,6 @@ int[] answer;
 List<Integer> list = new ArrayList<>();
 
 int[] answer = list.stream()
-						.mapToInt(Integer::intValue)
-						.toArray();
+		   .mapToInt(Integer::intValue)
+		   .toArray();
       
