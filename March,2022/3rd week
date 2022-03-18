@@ -44,5 +44,14 @@ int[] answer = list.stream()
 3) sorted - 요소들을 정렬해주는 작업
 참고하면 좋은 블로그 - https://jeffrey-oh.tistory.com/160
 
+3.18 < 문자열 쪼개기 >
+
+String[] modNum = str.split("");
+
+char(At)
+try~catch
+
+NumberFormatException
+
 
       
