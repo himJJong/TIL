@@ -7,4 +7,4 @@ The January TIL is a summary of what was newly learned in the process of develop
 ***
 The February TIL is a summary of java and django rest api (School Project and my study)
 ***
-The March TIL is a summary of Algorithm study(Programmers coding test) and TECHEER club   
+The March TIL is a summary of Algorithm study(Programmers coding test) and TECHEER Side Project   
