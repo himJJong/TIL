@@ -1,1 +1,5 @@
-~
+< 문자열 >
+
+1. (복사하고 싶은 문자열).repeat(num)
+2. str = str.replace("바꾸고 싶은 문자를" , "이걸로 채인지")
+3. replaceAll -> 정규식 사용가능 , replaceFirst ( 처음 해당하는 것만)
