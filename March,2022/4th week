@@ -5,9 +5,13 @@
 3. replaceAll -> 정규식 사용가능 , replaceFirst ( 처음 해당하는 것만)
 
 sql은 rdbms에서 데이터베이스의 정의와 조작을 위한 데이터 베이스 언어입니다. 데이터의 참조, 변경, 삭제, 계산 등 관계형 데이터베이스와 그 안에 있는 테이블 빛 데이터가 필요.
-SQL Tutorial , Progate
+연습 사이트 -> SQL Tutorial , Progate
+
+< == 연산자 >
+==연산자는 int,boolean과 같은 Primitive type에 대해 값을 비교한다.refernce type에 대해서느 주소값을 비교한다. 
+
+< equals >
+equals() 도 내부적으로는 ==연산자르 사용해 주소르 비교하는것과 다름이 없다. 하지만 내용이 주소를 비교하는 것String 에서
+는 주소를 비교하는 것이 아닌 내용을 비교하는 것이다. str1.equals(str2)
 
 자바 상속, 다형, 인터페이스
-
-
-
