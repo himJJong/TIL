@@ -17,3 +17,24 @@ equals() 도 내부적으로는 ==연산자르 사용해 주소르 비교하는�
 문자여 비교는 == 말고 .equals()를 사용하자. 
 .Indexof()로 해당 문자열의 인덱스를 찾을 수 있다.
 자바 상속, 다형, 인터페이스
+
+
+< Techeer >
+- 애자일
+    - GitHub Projects - Kanban board 사용 예정
+    [Sprint Board · ParabolInc/parabol](https://github.com/ParabolInc/parabol/projects/2)
+            
+    - 애자일 방법론 + 익스트림 프로그래밍 (XP) 개요
+    [소프트웨어 개발 방법론 - 애자일(Agile) 방법론](https://atoz-develop.tistory.com/entry/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C-%EB%B0%A9%EB%B2%95%EB%A1%A0-%EC%95%A0%EC%9E%90%EC%9D%BCAgile-%EB%B0%A9%EB%B2%95%EB%A1%A0)
+   
+        
+        - 작고 빈번한 릴리즈 - 빠른 피드백과 지속적인 개선
+        - 짝 프로그래밍(pair programming)
+        - 단순한 설계와 테스트 주도 개발(Test Driven Development, TDD)
+        - 스크럼
+            1. 계획 및 검토
+            2. 스프린트 계획 - 제품 백로그에서 스토리 (task)를 가져와 스프린트 백로그로 옮김
+            3. 스프린트 실행 + 일일 스크럼 회의
+            4. 스프린트 리뷰 + 회고 미팅
+            5. 2, 3, 4 반복
+            6. 30일 주기로 통합 + 동작할 수 있는 결과 release - 리팩토링을 통한 코드 품질 개선
