@@ -1,6 +1,6 @@
 이렇게 배열에서 max, min 구하기 가능
 
 for(int i: arr) 
-				min = Math.min(i, min);
+	min = Math.min(i, min);
 			
  
