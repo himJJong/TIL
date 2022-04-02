@@ -3,4 +3,4 @@
 for(int i: arr) 
 	min = Math.min(i, min);
 			
- 
+ long, double에서 값 비교 확인시 intValue() 사용하면 편함 
