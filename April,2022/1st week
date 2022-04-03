@@ -4,3 +4,7 @@ for(int i: arr)
 	min = Math.min(i, min);
 			
  long, double에서 값 비교 확인시 intValue() 사용하면 편함 
+
+- Figma or Zeplin
+    - 퍼블리싱을 할 때 무에서 유를 창조하는 것 보다는, 
+      팀원들이 생각하는 디자인 초안을 같이 만들고 그것을 기반으로 화면을 퍼블리싱하는 방법이 잘못된 구현의 여지가 적고 개발에 있어서 효율적이라 판단
