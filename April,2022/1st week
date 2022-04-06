@@ -14,4 +14,7 @@ for(int i: arr)
 
 Character.isLowerCase() 함수는 입력받은 인자가 영문 소문자인지 여부를 판단하여 true나 false를 리턴
 Character.isUpperCase() 대문자를 판단
+
+(ch-'a'+n)%26 + 'a'
+(ch-'a'+n)%26 + 'A' 
 한 글자씩 읽기 charAt(i)
