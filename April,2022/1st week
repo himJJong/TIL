@@ -10,3 +10,8 @@ for(int i: arr)
       팀원들이 생각하는 디자인 초안을 같이 만들고 그것을 기반으로 화면을 퍼블리싱하는 방법이 잘못된 구현의 여지가 적고 개발에 있어서 효율적이라 판단
 
 점프 투 Spring Boot 위키독스 참고 링크 : https://wikidocs.net/161164
+
+
+Character.isLowerCase() 함수는 입력받은 인자가 영문 소문자인지 여부를 판단하여 true나 false를 리턴
+Character.isUpperCase() 대문자를 판단
+한 글자씩 읽기 charAt(i)
