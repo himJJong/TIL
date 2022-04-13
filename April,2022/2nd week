@@ -5,3 +5,5 @@ build.gradle
 java, jdk(oracle, open), jvm 
 intellij idea, github, gitkraken 연결 test
 intellij, mysql 연결 test
+
+jsoup을 이용한 crawling or selenium python crawling 
