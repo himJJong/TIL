@@ -7,3 +7,10 @@ intellij idea, github, gitkraken 연결 test
 intellij, mysql 연결 test
 
 jsoup을 이용한 crawling or selenium python crawling 
+
+
+* JPA (ORM)을 통해 DB 테이블로 매핑이 되는 entity,
+* DB와 연결해 실제로 DB를 조작하는 repository,
+* 그런 DB 조작을 묶어서(감싸서) DB의 비즈니스 로직을 담당하는 service,
+* URL에 매핑되어 JSON으로 이뤄진 데이터를 받고 service를 호출하는 controller,
+* entity를 JSON에 대응되도록 감싸주는 DTO 객체
