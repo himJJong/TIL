@@ -217,6 +217,181 @@ Required Annotation을 사용하여 optional 하지 않은, 꼭 필요한 속성
 xml 설정에서 bean의 한정자 값(qualifier value)을 설정한다.
 @Autowired 어노테이션이 적용된 주입 대상에 @Qualifier 어노테이션을 설정한다.
 
+
+@Resource
+@Autowired와 마찬가지로 Bean 객체를 주입해주는데 차이점은 Autowired는 타입으로, Resource는 이름으로 연결해준다.
+
+javax.annotation.Resource
+표준 자바(JSR-250 표준) Annotation으로, Spring Framework 2.5.* 부터 지원 가능한 Annotation이다.
+
+Annotation 사용으로 인해 특정 Framework에 종속적인 어플리케이션을 구성하지 않기 위해서는 @Resource를 사용할 것을 권장한다.
+
+@Resource를 사용하기 위해서는 class path 내에 jsr250-api.jar 파일을 추가해야 한다.
+필드, 입력 파라미터가 한 개인 bean property setter method에 적용 가능하다.
+
+@PostConstruct, @PreConstruct
+의존하는 객체를 생성한 이후 초기화 작업을 위해 객체 생성 전/후에(pre/post) 실행해야 할 method 앞에 붙인다.
+
+@PreDestroy
+객체를 제거하기 전(pre)에 해야할 작업을 수행하기 위해 사용한다.
+
+@PropertySource
+해당 프로퍼티 파일을 Environment로 로딩하게 해준다.
+
+클래스에 @PropertySource("classpath:/settings.properties")라고 적고 클래스 내부에 @Resource를 Environment타입의 멤버 변수앞에 적으면 매핑된다.
+
+@ConfigurationProperties
+yaml파일 읽는다.
+
+default로 classpath:application.properties 파일이 조회된다.
+
+속성 클래스를 따로 만들어두고 그 위에 (prefix="mail")을 써서 프로퍼티의 접두사를 사용할 수 있다.
+
+mail.host = mailserver@mail.com
+
+mail.port = 9000
+
+mail.defaultRecipients[0] = admin@mail.com
+
+mail.defaultRecipients[1] = customer@mail.com
+@Lazy
+지연로딩을 지원한다.
+
+@Component나 @Bean Annotation과 같이 쓰는데 Class가 로드될 때 스프링에서 바로 bean등록을 마치는 것이 아니라 실제로 사용될 때 로딩이 이뤄지게 하는 방법이다.
+
+@Value
+properties에서 값을 가져와 적용할 때 사용한다.
+
+@Value("${value.from.file}")
+private String valueFromFile; 이라고 구성되어 있으면 value.from.file의 값을 가져와서 해당 변수에 주입해준다.
+
+spEL을 이용해서 조금 더 고급스럽게 쓸 수 있다.
+
+@Value(#{systemProperties['priority'] ?: 'some default'})
+@SpringBootApplication
+@Configuration, @EnableAutoConfiguration, @ComponentScan 3가지를 하나의 애노테이션으로 합친 것이다.
+
+@RequestMapping
+요청 URL을 어떤 method가 처리할지 mapping해주는 Annotation이다.
+
+Controller나 Controller의 method에 적용한다.
+
+요청을 받는 형식인 GET, POST, PATCH, PUT, DELETE 를 정의하기도 한다.
+
+요청 받는 형식을 정의하지 않는다면, 자동적으로 GET으로 설정된다.
+
+@RequestMapping("/list"), @RequestMapping("/home, /about");
+
+@RequestMapping("/admin", method=RequestMethod.GET)
+@Controller
+// 1) Class Level
+//모든 메서드에 적용되는 경우 “/home”로 들어오는 모든 요청에 대한 처리를 해당 클래스에서 한다는 것을 의미
+@RequestMapping("/home") 
+public class HomeController {
+    /* an HTTP GET for /home */ 
+    @RequestMapping(method = RequestMethod.GET)
+    public String getAllEmployees(Model model) {
+        ...
+    }
+    /*
+    2) Handler Level
+    요청 url에 대해 해당 메서드에서 처리해야 되는 경우
+    “/home/employees” POST 요청에 대한 처리를 addEmployee()에서 한다는 것을 의미한다.
+    value: 해당 url로 요청이 들어오면 이 메서드가 수행된다.
+    method: 요청 method를 명시한다. 없으면 모든 http method 형식에 대해 수행된다.
+    */
+    /* an HTTP POST for /home/employees */ 
+    @RequestMapping(value = "/employees", method = RequestMethod.POST) 
+    public String addEmployee(Employee employee) {
+        ...
+    }
+}
+@RequestMapping에 대한 모든 매핑 정보는 Spring에서 제공하는 HandlerMapping Class가 가지고 있다.
+
+@CookieValue
+쿠키 값을 parameter로 전달 받을 수 있는 방법이다.
+
+해당 쿠키가 존재하지 않으면 500 에러를 발생시킨다.
+
+속성으로 required가 있는데 default는 true다.
+false를 적용하면 해당 쿠키 값이 없을 때 null로 받고 에러를 발생시키지 않는다.
+
+// 쿠키의 key가 auth에 해당하는 값을 가져옴
+public String view(@CookieValue(value="auth")String auth){...}; 
+@CrossOrigin
+CORS 보안상의 문제로 브라우저에서 리소스를 현재 origin에서 다른 곳으로의 AJAX요청을 방지하는 것이다.
+
+@RequestMapping이 있는 곳에 사용하면 해당 요청은 타 도메인에서 온 ajax요청을 처리해준다.
+
+//기본 도메인이 http://jeong-pro.tistory.com 인 곳에서 온 ajax요청만 받아주겠다.
+@CrossOrigin(origins = "http://jeong-pro.tistory.com", maxAge = 3600)
+@ModelAttribute
+view에서 전달해주는 parameter를 Class(VO/DTO)의 멤버 변수로 binding 해주는 Annotation이다.
+
+binding 기준은 <input name="id" /> 처럼 어떤 태그의 name값이 해당 Class의 멤버 변수명과 일치해야하고 setmethod명도 일치해야한다.
+
+class Person{
+
+String id;
+
+public void setId(String id){ this.id = id;}
+public String getId(){ return this.id }
+}
+
+@Controller
+@RequestMapping("/person/*")
+public class PersonController{
+	@RequestMapping(value = "/info", method=RequestMethod.GET)
+    	//view에서 myMEM으로 던져준 데이터에 담긴 id 변수를 Person타입의 person이라는 객체명으로 바인딩.
+	public void show(@ModelAttribute("myMEM") Person person, Model model)
+	{ model.addAttribute(service.read(person.getId())); }
+}
+@GetMapping
+@RequestMapping(Method=RequestMethod.GET)과 같다.
+@PostMapping, @PutMapping, @PatchMapping, @DeleteMapping 등 도 있다.
+
+@SessionAttributes
+Session에 data를 넣을 때 쓰는 Annotation이다.
+
+@SessionAttributes("name")이라고 하면 Model에 key값이 "name"으로 있는 값은 자동으로 세션에도 저장되게 한다.
+
+@Valid
+유효성 검증이 필요한 객체임을 지정한다.
+
+@InitBinder
+@Valid 애노테이션으로 유효성 검증이 필요하다고 한 객체를 가져오기전에 수행해야할 method를 지정한다.
+
+@RequestAttribute
+Request에 설정되어 있는 속성 값을 가져올 수 있다.
+
+@RequestBody
+요청이 온 데이터(JSON이나 XML형식)를 바로 Class나 model로 매핑하기 위한 Annotation이다.
+
+POST나 PUT, PATCH로 요청을 받을때에, 요청에서 넘어온 body 값들을 자바 타입으로 파싱해준다.
+
+HTTP POST 요청에 대해 request body에 있는 request message에서 값을 얻어와 매핑한다.
+RequestData를 바로 Model이나 클래스로 매핑한다.
+
+이를테면 JSON 이나 XML같은 데이터를 적절한 messageConverter로 읽을 때 사용하거나 POJO 형태의 데이터 전체로 받는 경우에 사용한다.
+
+@RequestMapping(value = "/book", method = RequestMethod.POST)
+public ResponseEntity<?> someMethod(@RequestBody Book book) {
+// we can use the variable named book which has Book model type.
+try {
+   service.insertBook(book);
+} catch(Exception e) {
+    e.printStackTrace();
+}
+
+// return some response here
+}
+@RequestHeader
+Request의 header값을 가져올 수 있다. 메소드의 파라미터에 사용한다.
+
+//ko-KR,ko;q=0.8,en-US;q=0.6
+@RequestHeader(value="Accept-Language")String acceptLanguage 로 사용 
+
+
 참고한 자료 및 더 볼 velog : https://velog.io/@gillog/Spring-Annotation-정리
 
 
