@@ -118,6 +118,11 @@ extends는 클래스를 확장하는 거고 implements는 인터페이스를 구
 인터페이스와 보통 클래스의 차이는 인터페이스는 정의한 메소드를 구현하지 않아도 된다.
 인터페이스를 상속받는 클래스에서 인터페이스에 정의된 메소드를 구현하면 된다.
 
+
+
 참조한 사이트 - https://hashcode.co.kr/questions/471/implements와-extends의-차이점이-뭐고-각각-언제-쓰는건가요
             https://zbomoon.tistory.com/13
             https://seohc.tistory.com/121
+
+
+추상클래스, 참조
