@@ -135,8 +135,31 @@ JPA는 인터페이스기 때문에 안에 내용물이 없습니다. 그러므�
 
 Spring Data JPA란?
 
+
+
 JPA를 편하게 쓸 수 있도록 Spring 측에서 만든 모듈입니다.
 repository라는 인터페이스를 가지고 있습니다. 사용자는 이 인터페이스의 규약대로 메소드를 적으면 메소드 이름에 적합한 쿼리를 날립니다. 
 또한, Hibernate 외에 다른 구현체로 쉽게 교체가 가능하고, 관계형 DB또한 다른 저장소로 쉽게 교체가 가능합니다.
 - https://velog.io/@qweadzs/3.-Spring-boot-스프링-부트에서-JPA로-DB를-다뤄보자
 ~ sh
+
+
+자바에서 db를 건드린다 = jdbc를 쓴다 라고 고정관념? 그렇게만 써봤어서 jpa와 jdbc의 차이점이 궁금했다.
+
+ORM은 DB 테이블을 자바 객체로 매핑함으로써 객체간의 관계를 바탕으로 SQL을 자동으로 생성하지만 Mapper는 SQL을 명시해주어야 한다.
+ORM은 RDB의 관계를 Object에 반영하는 것이 목적이라면, Mapper는 단순히 필드를 매핑시키는 것이 목적이라는 점에서 지향점의 차이가 있다.
+SQL Mapper
+
+SQL ←mapping→ Object 필드
+SQL 문으로 직접 디비를 조작한다.
+Mybatis, jdbcTemplate
+ORM(Object-Relation Mapping/객체-관계 매핑)
+
+DB 데이터 ←mapping→ Object 필드
+객체를 통해 간접적으로 디비 데이터를 다룬다.
+객체와 디비의 데이터를 자동으로 매핑해준다.
+SQL 쿼리가 아니라 메서드로 데이터를 조작할 수 있다.
+객체간 관계를 바탕으로 sql을 자동으로 생성한다
+Persistant API라고 할 수 있다.
+JPA, Hibernate
+https://velog.io/@adam2/JPA는-도데체-뭘까-orm-영속성-hibernate-spring-data-jpa
