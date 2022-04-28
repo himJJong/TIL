@@ -1,1 +1,13 @@
-~
+JWT Process
+
+< CLIENT >
+
+1) 사용자가 id 와 passwd를 입력하여 로그인하면
+3) 클라이언트에 JWT를 발급
+5) JWT 서명을 체크하고 JWT에서 사용자 정보를 확인
+
+< SERVER >
+
+2) 서버는 요청을 확인하고 secret key를 통해 Access token을 발급
+4) 서비스 요청과 권한을 확인하기 위해 헤더에 JWT 전달
+6) 클라이언트에 요청에 대한 응답과 전달
