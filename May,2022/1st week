@@ -17,3 +17,5 @@ Java - comparator
 
 Comparator를 사용하기 위해서는 Array or List Collections일 때 가능하다.
 지역변수 o1,o2를 사용하며 return 값으로 음수,0,양수를 반환하며 정렬할 수 있다.
+
+substring(num) , substring(num1, num2)
