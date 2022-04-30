@@ -35,3 +35,32 @@ PostMapping
 - 주소창에 파라미터가 노출되지 않는다.
 =============================================
 
+파싱 (Parsing : 구문분석) 은 하나의 프로그램을 런타임환경 (예를 들면, 브라우저 내 자바스크립트 엔진)이 실제로 행할 수 있는 내부 포맷으로 분석하고 변환하는 것을 의미합니다.
+즉, 파싱은 문서의 내용을 *토큰(token)으로 분석하고, 문법적 의미와 구조를 반영한 *파스트리(parse tree)를 생성하는 과정입니다.
+ 
+* 토큰이란 ? 언어가 사용하는 기본 '단어'를 말한다. 토큰은 구문적으로 의미를 갖는 최소의 단위이며 우리가 작성하는 프로그램은 모두 이러한 토큰으로 이루어진다. 
+ex) JAVA에서 보면
+public static void main(String [] args{ ... }
+에서 토큰은 public, static, voidm main, (, String, [, ], args, ), 
+{ ... 등이며 이러한 토큰을 제외한 공백문자(스페이스, 탭문자, 개행문자 등)는 문자열 내에서 사용되는 경우가 아닌 이상은 모두 아무런 의미를 가지지 않는다.
+
+<Spring boot Get Api>
+
+Rest API디자인을 하기 위해 자원에 대한 행위들은 HTTP Method(GET,POST,PUT,DELETE)로 표현한다.
+
+1) @RestController
+-해당 annotation을 추가해주면 해당 class는 REST API를 처리하는 controller로 등록이 된다.
+
+2) @RequestMapping(path)
+- 리소스를 설정하는 코드이며 괄호안에 입력하는 값에 따라 URI가 localhost:8080/path로 설정된다.
+
+3) @GetMapping(path)
+- Get API를 해당 uri로 mapping시켜준다.
+
+4) @PathVariable
+- 변화하는 구간에 사용하는 annotation이며 URL path를 parsing해준다.
+
+5) @RequestParam
+- URL에 Query문을 추가할 때 parameter를 parshing해준다.
+
+참고자료 : https://solog4something.tistory.com/13, https://velog.io/@seongwon97/Spring-Boot-GET-API-사용하기
