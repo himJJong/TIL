@@ -10,4 +10,4 @@ The March TIL is a summary of Algorithm study(Programmers Level 1 coding test) a
 ***
 The April TIL is a summary of Algorithm study(Programmers Level 1, Level2) and Techeer Side project(with Java)
 ***
-The May TIL is a summary of Algorithm study(Progrmmers Level2, Mysql) and JMT-Monster Project
+The May TIL is a summary of Algorithm study(Progrmmers Level2, Mysql) and JMT-Monster Project(Spring boot)
