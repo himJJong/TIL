@@ -65,6 +65,8 @@ Rest API디자인을 하기 위해 자원에 대한 행위들은 HTTP Method(GET
 
 참고자료 : https://solog4something.tistory.com/13, https://velog.io/@seongwon97/Spring-Boot-GET-API-사용하기
 
+=================================================================
+
 Controller, template, static ,json 반환 api 만들기
 Aws RDS, S3 bucket
-JPA, 
+JPA
