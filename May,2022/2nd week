@@ -27,7 +27,11 @@ ex)
 
 - Stack class => push(), pop(), peek(), empty(), search()
 
+push() vs add()
 push()는 stack에서 제공, push()의 리턴값은  <E>이고
 add()는 List에서 제공하는 메서드이다. add()의 리턴값은 boolean
 
- 
+isEmpty() vs empty()
+isEmpty() : Stack 비어있는지 확인
+empty() : Stack을 초기화
+
