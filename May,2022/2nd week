@@ -35,3 +35,10 @@ isEmpty() vs empty()
 isEmpty() : Stack 비어있는지 확인
 empty() : Stack을 초기화
 
+-------------------------------------------------------------------
+Spring boot
+
+queryparam , Json data parsing, controller
+application.yml, application-secret.yml, application-test.yml, application.properties
+h2, mysql , Log4j
+
