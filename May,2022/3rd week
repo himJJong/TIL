@@ -1,1 +1,2 @@
-..
+and, or 연산 -> (a | b), (a & b)
+Integer.toBinaryString(a|b) -> 2진수 변환
