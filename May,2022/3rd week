@@ -4,6 +4,14 @@ replace함수 배열 안의 모든 값을 바꿔줌.
 
 큰따옴표(" ")는 문자열(String)을 감싸는 기호 / 작은따옴표(' ')는 문자(Character)를 감싸는 기호이다. 
 
-queue offer vs add
-offer 메서드는 큐가 가득차서 더이상 추가할 수 없는 경우 false를 반환하고 요소가 추가되면 true를 반환하며 특정 예외를 throw하지 않는다. 
-add 메소드는 illegalStateException를 발생
+<queue offer vs add>
+
+offer - 큐가 가득차서 더이상 추가할 수 없는 경우 false를 반환하고 요소가 추가되면 true를 반환하며 특정 예외를 throw하지 않는다. 
+add - illegalStateException를 발생
+
+<queue remove vs peek>
+
+remove - 헤드 요소를 조회하고 제거, 하지만 큐가 비어 있다면 예외발생
+poll - 헤드 요소를 조회하고 제거, 하지마 큐 비어 있다며 null 반환
+
+stack - ArrayList, queue - LinkedList
