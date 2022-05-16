@@ -15,3 +15,6 @@ remove - 헤드 요소를 조회하고 제거, 하지만 큐가 비어 있다면
 poll - 헤드 요소를 조회하고 제거, 하지마 큐 비어 있다며 null 반환
 
 stack - ArrayList, queue - LinkedList
+
+문제 상황에서 에러를 발생시키느냐(add, remove, element)
+아니면 null 혹은 false를 반환(offer, poll, peek) 
