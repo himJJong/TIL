@@ -49,11 +49,11 @@ ex) Tomcat
 
 OLTP vs OLAP
 
-- Online Transaction Processing
+- Online Transaction Processing(OLTP)
     - WAS와 연동되는 비교적 소규모 데이터베이스에서 데이터 CRUD에 사용되는 쿼리
-    - 트랜잭션이므로 ACID 요소가 중요시됨
-    - 빠른 조회 등의 레이턴시가 중요함
+    - 트랜잭션이므로 ACID 요소가 중요시됨(트랜잭션 - 데이터베이스의 상태를 변경시키기 위해 수행하는 작업 단위)
+    - 빠른 조회 등의 지연시간 처리 중요함
     - 다운타임 없이 트랜잭션 처리와 데이터 무결성에 안정적이어야 함
-- Online Analytical Processing
+- Online Analytical Processing(OLAP)
     - 데이터 웨어하우스등 큰 규모의 데이터베이스에서 데이터 분석에 사용되는 쿼리
     - 레이턴시는 상대적으로 중요하지 않음
