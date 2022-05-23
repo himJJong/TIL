@@ -115,4 +115,40 @@ String을 +연산으로 붙이지 말고 StringBuilder를 이용하면 수행시
 so 여기에 '0'을 빼주면 정수로 변환
 ex) charAt(i)-'0'
 
+<StringBuilder>
 
+sb.append(값)
+- StringBuffer, StringBuilder 뒤에 값을 붙인다
+ 
+sb.insert(인덱스, 값)
+- 특정 인덱스부터 값을 삽입한다
+ 
+sb.delete(인덱스, 인덱스)
+- 특정 인덱스부터 인덱스까지 값을 삭제한다
+ 
+sb.indexOf(값)
+- 값이 어느 인덱스에 들어있는지 확인한다
+ 
+sb.substring(인덱스, 인덱스)
+- 인덱스부터 인덱스까지 값을 잘라온다
+ 
+sb.length()
+- 길이 확인
+ 
+sb.replace(인덱스, 인덱스, 값)
+- 인덱스부터 인덱스까지 값으로 변경
+ 
+sb.reverse()
+- 글자 순서를 뒤집는다
+ 
+이제 간단히 정리해 보자면
+ 
+<String에서 concat, + 사용 시 속도가 왜 느려지나>
+=> String은 불변(immutable)하기 때문에 concat, + 사용 시 기존 값을 버리고 새로 할당해서 1000번 이상 수행할 경우 급격히 느려짐
+ 
+<StringBuffer, StringBuilder를 사용하는 이유> 
+=> String에서 concat, +를 천번 이상 사용할 경우 속도가 급격히 느려지기 때문에 해당 상황에는
+변하는(mutable) StringBuffer와 StringBuilder를 사용한다
+ 
+<StringBuffer, StringBuilder의 차이> 
+=> StringBuffer는 공통 메소드 동기화로 인해 멀티 스레드 환경에서만 사용 그 외에는 StringBuilder를 사용하면 됨
