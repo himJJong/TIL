@@ -152,3 +152,10 @@ sb.reverse()
  
 <StringBuffer, StringBuilder의 차이> 
 => StringBuffer는 공통 메소드 동기화로 인해 멀티 스레드 환경에서만 사용 그 외에는 StringBuilder를 사용하면 됨
+
+====================================================
+토큰 관련 참고 글 : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=jmjm223&logNo=221483149513
+
+슬라이스(Slice) 테스트
+-슬라이스(Slice) 테스트를 한다는 건 특정 Layer를 타켓으로 테스트를 한다는 뜻이다.ex) Controller Layer, Service Layer
+
