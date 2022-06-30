@@ -12,4 +12,6 @@ The April TIL is a summary of Algorithm study(Programmers Level 1, Level2) and T
 ***
 The May TIL is a summary of Algorithm study(Progrmmers Level2, Mysql) and Techeer Side project(Spring boot)
 ***
-The June TIL is a summary of Algorithm study(BOJ Greedy, Mysql) and Techeer Side project, Like lion(Spring boot + F.E.) 
+The June TIL is a summary of Algorithm study(BOJ Greedy, Mysql) and Techeer Side project, Like lion-B.E Course
+***
+The July TIL is a summary of Algorithm study(Greedy, Brute Force) and Techeer Side project, Like lion-B.E Course
