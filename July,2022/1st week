@@ -1,17 +1,13 @@
 boolean 초기값은 False
 
 만약 3 5 이렇게 입력받을시
-
 String[] inputs = br.readLine().split(" ");
 
 int num1 = Integer.parseInt(inputs[0]);
 int num2 = Integer.parseInt(inputs[1]);
 
-이렇게 쓰면 편함
-
-그래서 일반적으로 100만 개 이하일 경우에 완전탐색 알고리즘을 사용하면 가장 적절
+이렇게 쓰면 편함, 그래서 일반적으로 100만 개 이하일 경우에 완전탐색 알고리즘을 사용하면 가장 적절
 
 ArrayList - 공간활동이 능동적이다. 단점 삭제시 앞으로 당겨야 하는 점
 
-ArrayList - > 조회할 때 사용하면 좋음 O(1)
-LinkedList - > 추가하거나 삭제할 때 사용하면 좋음 O(1)
+ArrayList - > 조회할 때 사용하면 좋음 O(1)                     LinkedList - > 추가하거나 삭제할 때 사용하면 좋음 O(1)
