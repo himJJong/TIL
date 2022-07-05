@@ -11,3 +11,4 @@ int num2 = Integer.parseInt(inputs[1]);
 ArrayList - 공간활동이 능동적이다. 단점 삭제시 앞으로 당겨야 하는 점
 
 ArrayList - > 조회할 때 사용하면 좋음 O(1)                     LinkedList - > 추가하거나 삭제할 때 사용하면 좋음 O(1)
+Priority Queue 는 값을 추가하거나 빼면 항상 우선순위에 맞게 정렬된 상태이기에 우선순위를 중요하게 생각하는 문제에서 유용하다.
