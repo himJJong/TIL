@@ -1,5 +1,6 @@
 # TIL
 <Today i Learned>
+I decided to organize it on my blog starting in July -> 
 
 *** 
 The January TIL is a summary of what was newly learned in the process of development through an external program (Silicon Valley Ai Project)
